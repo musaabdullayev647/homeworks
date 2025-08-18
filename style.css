@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+
+
+.header {
+background-color: ffffff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+
+}
+
+
+
+
+.logo{
+    display: flex;
+    width: 100px;
+    height: 50px;
+    gap: 10px;
+    margin: 40px 20px;
+}
+
+
+.hero{
+
+background-image:url("bina.jpg");
+background-size: cover;
+height: 100vh;
+
+
+} 
+
+
+
+
+
+
+
+
+
+
