@@ -1,0 +1,54 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.payment{
+    display: flex;
+    
+    gap: 30px;
+    justify-content: center;
+   align-items: center; 
+}
+
+.payment_info img{
+    width:200px;
+    height: 200px;
+}
+
+.payment_content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+}
+
+.payapi{
+
+display: flex;
+    
+    gap: 30px;
+    justify-content: center;
+   align-items: center; 
+
+}
+
+
+
+
+@media screen and (max-width:768px) {
+    .payment{
+        flex-direction: column;
+    }
+    
+} 
+    
+
+
+
+
+
+
