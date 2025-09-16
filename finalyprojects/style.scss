@@ -1,0 +1,240 @@
+@import '_variables.scss';
+@import '_mixxins.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+.header {
+  width: 100%;
+}
+
+.header_top {
+  background-color: $bg-color-header;
+  padding: 30px 50px;
+  width: 100%;
+  @include d_flex(space-between, center, row, 20px);
+  color: white;
+
+  &_left {
+    @include d_flex(space-between, center, row, 20px);
+    font-size: $font-size-sm;
+    font-weight: 600;
+    margin-right: 90px;
+  }
+
+  &_right {
+    @include d_flex(space-between, center, row, 20px);
+    font-size: $font-size-sm;
+    font-weight: 500;
+    margin-left: $margin-md;
+
+    .search_icon{
+        display: none;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    button {
+      background-color: $bg-color-button;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: $font-size-md;
+    }
+  }
+}
+
+.header_nav {
+  background-color: white;
+  padding: 20px 0;
+  width: 100%;
+  @include d_flex(space-between, center, row, 20px);
+  color: #353535;
+  font-size: $font-size-sm;
+  font-weight: 700;
+
+  ul {
+    @include d_flex(space-between, center, row, 20px);
+    list-style: none;
+    margin-left: $margin-lg;
+  }
+
+  .header_nav_right {
+    @include d_flex(space-between, center, row, 20px);
+    margin-right: $margin-lg;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px 10px;
+    background-color: #F5F5F5;
+    &_search_bar{
+        padding: 5px 30px;
+        border-radius: 15px;
+        border-style: none;
+        outline: none;
+        background: transparent;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header_top {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 10px;
+
+    &_left {
+      margin-right: 0;
+      .header_icon{
+        display: none;
+      }
+
+        p{
+            display: none;
+        }
+    }
+
+    &_right {
+      margin-left: 0;
+
+        .search_icon{
+            display: inherit;
+    }
+
+        .menu_icon{
+            display: inherit;
+        }
+    }
+
+    button{
+        display: none;
+    }
+  }
+
+  .header_nav {
+    display: none;
+  }
+}
+
+.cards_1 {
+  position: relative;
+  display: inline-block;
+}
+
+.cards_1 .section_cards_img {
+  width: 100%;
+  display: block;
+  
+}
+
+.cards_1 .section_cards_icon {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: #ffffff;
+  
+}
+
+@media screen and (max-width: 768px) {
+  .cards_1 .section_cards_img{
+    width: 100%;
+    height: 700px;
+  object-fit:fill;
+  }
+  .cards_1 .section_cards_icon{
+    display: none;
+  }
+}
+
+.cards_2{
+  @include d_flex(center, center, column, 20px);
+  text-align: center;
+  margin: 0px 0;
+  padding: 0 20px;
+  background: linear-gradient(to bottom, #6190E8 , #A7BFE8 );
+  border-radius: 20px;
+  box-shadow: $box-shadow-card;
+  padding: 50px 20px;
+  max-width: 100%;
+  margin-left: auto;
+
+  h2{
+    font-size: $font-size-lg;
+    font-weight: 700;
+  }
+
+  p{
+    font-size: $font-size-md;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+
+&_buttons{
+  @include d-flex(center, center, row, 20px);
+}
+  .cards_2_buttons_left{
+    background-color: $bg-color-button;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: $font-size-md;
+    font-weight: 600;
+  }
+  .cards_2_buttons_right{
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: $font-size-md;
+    font-weight: 600;
+  }
+  img{
+    width: 700px;
+    height: 400px;
+    margin-left: 10px;
+    object-fit: cover;}
+
+}
+
+@media screen and (max-width: 768px) {
+  .cards_2{
+    h2{
+      font-size: $font-size-md;
+    }
+    p{
+      font-size: $font-size-sm;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+
+>.cards_3{
+  @include grid(1fr 1fr, auto, 20px);
+  margin: 50px 0;
+  gap: 20px;
+
+  
+}
