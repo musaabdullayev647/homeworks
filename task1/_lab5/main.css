@@ -1,0 +1,19 @@
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+th, td{
+    border: 2px solid black;
+    padding: 10px;
+}
+th{
+    background-color: black;
+    color: white;
+}
+tfoot{
+    background-color: black;
+    color: white;
+}
